@@ -1,0 +1,19 @@
+uuid: e4d71939-f2ad-4380-8572-3fbe5f11a7d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dolebas_publisher
+  module:
+    - user
+_core:
+  default_config_hash: umtvzkKoq-M-67ncB0DLFDJKI0OcgU5CHnlMcunhb18
+id: node.dolebas_publisher.default
+targetEntityType: node
+bundle: dolebas_publisher
+mode: default
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+uuid: 282bacc8-0804-4ab4-ac7f-513e020832de
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: az0w5V0ViZUYqlUJ2vEd9fA3Lsro-X6X9610q4q1cW8
+id: node.field_dolebas_trans_amount
+field_name: field_dolebas_trans_amount
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

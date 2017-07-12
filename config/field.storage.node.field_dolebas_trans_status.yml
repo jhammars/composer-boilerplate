@@ -1,0 +1,23 @@
+uuid: 9c9ba5c9-b074-41be-a917-b824fed9ac12
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: iCcgSCbbaShuohRFHhK1IfIYVxogBUDaTkWrRJgr6ew
+id: node.field_dolebas_trans_status
+field_name: field_dolebas_trans_status
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 740e1676-0d9a-43d2-8fd3-0fca48b984b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: oQrBacTpZvc34gdMaAh6WJf5lR3fz6Nspytp4d3YsaM
+name: 'Dolebas Publisher'
+type: dolebas_publisher
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false
