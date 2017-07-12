@@ -144,7 +144,7 @@
   "config": {
     "optimize-autoloader": true,
     "preferred-install": {
-        "dolebas/*": "source",
+        "dolebas/*": "dist",
         "*": "dist"
     },
     "sort-packages": false
