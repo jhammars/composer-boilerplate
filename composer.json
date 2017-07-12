@@ -5,6 +5,38 @@
   "license": "MIT",
   "repositories": [
     {
+        "type": "vcs",
+        "url": "https://github.com/dolebas/dolebas_config.git"
+    },
+    {
+        "type": "vcs",
+        "url": "https://github.com/dolebas/dolebas_payments.git"
+    },
+    {
+        "type": "vcs",
+        "url": "https://github.com/dolebas/dolebas_default_content.git"
+    },
+    {
+        "type": "vcs",
+        "url": "https://github.com/dolebas/dolebas_player.git"
+    },
+    {
+        "type": "vcs",
+        "url": "https://github.com/dolebas/dolebas_publisher.git"
+    },
+    {
+        "type": "vcs",
+        "url": "https://github.com/dolebas/dolebas_uploader.git"
+    },
+    {
+        "type": "vcs",
+        "url": "https://github.com/dolebas/dolebas_subtheme.git"
+    }, 
+    {
+        "type": "vcs",
+        "url": "https://github.com/ericpugh/drupal-views-bootstrap"
+    }, 
+    {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
     }
@@ -20,7 +52,16 @@
     "drupal/simple_block": "^1.0@beta",
     "drush/drush": "~8",
     "rvtraveller/qs-composer-installer": "^1.1",
-    "webflo/drupal-core-strict": "^8"
+    "webflo/drupal-core-strict": "^8",
+    "dolebas/dolebas_subtheme": "@dev",
+    "dolebas/dolebas_default_content": "@dev",
+    "dolebas/dolebas_player": "@dev",
+    "dolebas/dolebas_publisher": "@dev",
+    "dolebas/dolebas_uploader": "@dev",
+    "dolebas/dolebas_payments": "@dev",
+    "dolebas/dolebas_config": "@dev",
+    "drupal/views_bootstrap": "@dev",
+    "drupal/admin_toolbar": "^1.19"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
@@ -72,7 +113,9 @@
       "web/modules/contrib/{$name}": ["type:drupal-module"],
       "web/profiles/contrib/{$name}": ["type:drupal-profile"],
       "web/themes/contrib/{$name}": ["type:drupal-theme"],
-      "drush/contrib/{$name}": ["type:drupal-drush"]
+      "drush/contrib/{$name}": ["type:drupal-drush"],
+      "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+      "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
     },
     "build-env": {
       "install-cms": [
@@ -100,7 +143,10 @@
   },
   "config": {
     "optimize-autoloader": true,
-    "preferred-install": "dist",
-    "sort-packages": true
+    "preferred-install": {
+        "dolebas/*": "source",
+        "*": "dist"
+    },
+    "sort-packages": false
   }
 }
