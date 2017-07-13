@@ -37,4 +37,18 @@ if (file_exists($local_settings)) {
  *
  * See: tests/installer-features/installer.feature
  */
-$settings['install_profile'] = 'standard';
+$settings['install_profile'] = 'config_installer';
+
+// Require HTTPS, www.
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+  ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+  // Check if Drupal is running via command line
+  (php_sapi_name() != "cli")) {
+  if ($_SERVER['HTTP_HOST'] != 'www.dolebas.com' ||
+      !isset($_SERVER['HTTP_X_SSL']) ||
+      $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://www.dolebas.com'. $_SERVER['REQUEST_URI']);
+    exit();
+  }
+}
