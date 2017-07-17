@@ -1,4 +1,4 @@
-uuid: 08bcf163-3ccf-415b-96e0-1d3e01d57e88
+uuid: 64da6e02-3b98-411c-94eb-b98767b9f0d3
 langcode: en
 status: true
 dependencies: {  }
@@ -10,4 +10,3 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
-  - 'use exclude node title'
