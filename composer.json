@@ -6,7 +6,7 @@
   "repositories": [
     {
         "type": "vcs",
-        "url": "https://github.com/dolebas/dolebas_auth.git"
+        "url": "https://github.com/dolebas/dolebas_user.git"
     },    
     {
         "type": "vcs",
@@ -64,7 +64,7 @@
     "dolebas/dolebas_uploader": "@dev",
     "dolebas/dolebas_payments": "@dev",
     "dolebas/dolebas_config": "@dev",
-    "dolebas/dolebas_auth": "@dev",
+    "dolebas/dolebas_user": "@dev",
     "drupal/views_bootstrap": "@dev",
     "drupal/admin_toolbar": "^1.19"
   },
