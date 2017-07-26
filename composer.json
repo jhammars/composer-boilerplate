@@ -37,10 +37,6 @@
         "url": "https://github.com/dolebas/dolebas_subtheme.git"
     }, 
     {
-        "type": "vcs",
-        "url": "https://github.com/ericpugh/drupal-views-bootstrap"
-    }, 
-    {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
     }
@@ -49,6 +45,7 @@
     "composer/installers": "^1.0.20",
     "cweagans/composer-patches": "^1.0",
     "drupal-composer/drupal-scaffold": "^2.0.1",
+    "drupal/admin_toolbar": "^1.19",      
     "drupal/config_direct_save": "^1.0",
     "drupal/config_installer": "^1.0",
     "drupal/console": "^1.0.0-rc8",
@@ -66,7 +63,7 @@
     "dolebas/dolebas_config": "@dev",
     "dolebas/dolebas_user": "@dev",
     "drupal/views_bootstrap": "@dev",
-    "drupal/admin_toolbar": "^1.19"
+    "drupal/libraries": "@dev"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
