@@ -35,7 +35,15 @@
     {
         "type": "vcs",
         "url": "https://github.com/dolebas/dolebas_subtheme.git"
+    },
+    {
+        "type": "vcs",
+        "url": "https://github.com/drupalprojects/views_bootstrap.git"
     }, 
+    {
+        "type": "vcs",
+        "url": "https://github.com/drupalprojects/libraries.git"
+    },    
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
