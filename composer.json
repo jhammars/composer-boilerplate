@@ -71,7 +71,8 @@
     "dolebas/dolebas_config": "@dev",
     "dolebas/dolebas_user": "@dev",
     "drupal/views_bootstrap": "@dev",
-    "drupal/libraries": "@dev"
+    "drupal/libraries": "@dev",
+    "drupal/smtp": "^1.0@beta"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
