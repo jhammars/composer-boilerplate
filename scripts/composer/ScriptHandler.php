@@ -80,4 +80,17 @@ class ScriptHandler
     $gitignoreContents = preg_replace('/.*::: cut :::*/s', '', $gitignoreContents);
     file_put_contents($gitignoreFile, $gitignoreContents);
   }
+  
+  // Git add -A && git commit -m"..." && git push ... 
+  public static function dolebasAmPush(Event $event) {
+    $myArr = $event->getArguments();
+    $myVar = $myArr[0];
+    system('cd ~/workspace/web/modules/custom/' . $myVar . ' && DOLEBAS_MODULE="${PWD##*/}" && origin="git@github.com:jhammars/${DOLEBAS_MODULE}.git" && git remote rm origin && git remote add origin $origin && git add -A && git commit -m"Ref comment in pull request" && git fetch composer && git rebase composer/master && git push --force origin');
+  }  
+  
+  // Git status for several modules
+  public static function dolebasGitStatus() {
+    system('echo DOLEBAS_CONFIG && cd ~/workspace/web/modules/custom/dolebas_config/ && git status && echo DOLEBAS_DEFAULT_CONTENT && cd ~/workspace/web/modules/custom/dolebas_default_content/ && git status && echo DOLEBAS_PAYMENTS && cd ~/workspace/web/modules/custom/dolebas_payments/ && git status && echo DOLEBAS_PLAYER && cd ~/workspace/web/modules/custom/dolebas_player/ && git status && echo DOLEBAS_PUBLISHER && cd ~/workspace/web/modules/custom/dolebas_publisher/ && git status && echo DOLEBAS_UPLOADER && cd ~/workspace/web/modules/custom/dolebas_uploader/ && git status && echo DOLEBAS_USER && cd ~/workspace/web/modules/custom/dolebas_user/ && git status && echo DOLEBAS_SUBTHEME && cd ~/workspace/web/themes/custom/dolebas_subtheme/ && git status && cd ~/workspace/web/modules/custom/');
+  }  
+  
 }

@@ -43,7 +43,7 @@
     {
         "type": "vcs",
         "url": "https://github.com/drupalprojects/libraries.git"
-    },    
+    },         
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
@@ -52,8 +52,8 @@
     "require": {
     "composer/installers": "^1.0.20",
     "cweagans/composer-patches": "^1.0",
+    "drupal/admin_toolbar": "^1.19",    
     "drupal-composer/drupal-scaffold": "^2.0.1",
-    "drupal/admin_toolbar": "^1.19",      
     "drupal/config_direct_save": "^1.0",
     "drupal/config_installer": "^1.0",
     "drupal/console": "^1.0.0-rc8",
@@ -100,11 +100,15 @@
   "scripts": {
     "build-assets": [
       "@prepare-for-pantheon",
+      "@dolebas-am-push",
+      "@dolebas-git-status",      
       "composer install --optimize-autoloader"
     ],
     "drupal-unit-tests": "cd web/core && ../../vendor/bin/phpunit --testsuite=unit --exclude-group Composer,DependencyInjection,PageCache",
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
     "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
+    "dolebas-am-push": "DrupalProject\\composer\\ScriptHandler::dolebasAmPush",
+    "dolebas-git-status": "DrupalProject\\composer\\ScriptHandler::dolebasGitStatus",
     "post-install-cmd": [
       "@drupal-scaffold",
       "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
