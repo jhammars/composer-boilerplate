@@ -6,3 +6,4 @@ export PATH="/home/ubuntu/workspace/vendor/bin:$PATH"
 echo "Setting /web as web root"
 sudo mv ~/workspace/001-cloud9.conf 
 sudo mv ~/workspace/settings.local.php ~/workspace/web/sites/default/settings.local.php
+cp ~/workspace/.htaccess ~/workspace/web/.htaccess
