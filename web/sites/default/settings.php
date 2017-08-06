@@ -37,7 +37,7 @@ if (file_exists($local_settings)) {
  *
  * See: tests/installer-features/installer.feature
  */
-$settings['install_profile'] = 'config_installer';
+$settings['install_profile'] = 'minimal';
 
 // Require HTTPS, www.
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
