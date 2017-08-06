@@ -12,3 +12,6 @@ sudo mv ~/workspace/settings.local.php ~/workspace/web/sites/default/settings.lo
 
 echo "Adding .htaccess to /web"
 cp ~/workspace/.htaccess ~/workspace/web/.htaccess
+
+echo "Adding dev-develop.pantheonsite.io as a git remote"
+git remote add dev-develop ssh://codeserver.dev.4d667388-327c-4964-9507-33e18d99b2f1@codeserver.dev.4d667388-327c-4964-9507-33e18d99b2f1.drush.in:2222/~/repository.git
