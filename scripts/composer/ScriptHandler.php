@@ -82,10 +82,19 @@ class ScriptHandler
   }
   
   // Git add -A && git commit -m"..." && git push ... 
-  public static function dolebasAmPush(Event $event) {
+  public static function dolebasAmPush(Event $event=NULL) {
+    
     $myArr = $event->getArguments();
     $myVar = $myArr[0];
-    system('cd ~/workspace/web/modules/custom/' . $myVar . ' && DOLEBAS_MODULE="${PWD##*/}" && origin="git@github.com:jhammars/${DOLEBAS_MODULE}.git" && git remote rm origin && git remote add origin $origin && git add -A && git commit -m"Ref comment in pull request" && git fetch composer && git rebase composer/master && git push --force origin');
+    
+    // If it does not apply to dolebas_subtheme
+    if ($myVar != 'dolebas_subtheme') {
+      system('cd ~/workspace/web/modules/custom/' . $myVar . ' && DOLEBAS_MODULE="${PWD##*/}" && origin="git@github.com:jhammars/${DOLEBAS_MODULE}.git" && git remote rm origin && git remote add origin $origin && git add -A && git commit -m"Ref comment in pull request" && git fetch composer && git rebase composer/master && git push --force origin');
+
+    // Otherwise, apply to dolebas_subtheme
+    } else {
+      system('cd ~/workspace/web/themes/custom/' . $myVar . ' && DOLEBAS_MODULE="${PWD##*/}" && origin="git@github.com:jhammars/${DOLEBAS_MODULE}.git" && git remote rm origin && git remote add origin $origin && git add -A && git commit -m"Ref comment in pull request" && git fetch composer && git rebase composer/master && git push --force origin');
+    }
   }  
   
   // Git status for several modules
