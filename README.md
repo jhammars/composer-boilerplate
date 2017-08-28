@@ -5,6 +5,7 @@ This repository can be used for creating a dev environent.
 Cloud9 instructions:
 
 - Resize the workspace, set memory > 1.5GB
+- (Edit composer.json, set "dolebas/*": "source")
 - Run "composer install"
 - Create GitHub machine token when composer asks for it
 - Run "bash dolebas-c9-conf.sh"
