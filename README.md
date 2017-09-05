@@ -1,13 +1,10 @@
-# composer-boilerplate
 
-This repository can be used for creating a dev environent.
-
-Cloud9 instructions:
+## Follow the instructions below to create a development environment on Cloud9:
 
 - Resize the workspace, set memory > 1.5GB
 - (Edit composer.json, set "dolebas/*": "source")
 - Run "composer install"
-- Create GitHub machine token when composer asks for it
+- Create a GitHub machine token if/when composer asks for it
 - Run "bash dolebas-c9-conf.sh"
 - Run Project
 - Install Drupal minimal profile
