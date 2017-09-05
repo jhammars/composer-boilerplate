@@ -10,6 +10,9 @@ sudo mv ~/workspace/001-cloud9.conf /etc/apache2/sites-available/001-cloud9.conf
 echo "Adding settings.local.php to /web/sites/default"
 sudo mv ~/workspace/settings.local.php ~/workspace/web/sites/default/settings.local.php
 
+echo "Adding development.services.yml to /web/sites"
+sudo mv ~/workspace/development.services.yml ~/workspace/web/sites/development.services.yml
+
 echo "Adding .htaccess to /web"
 cp ~/workspace/.htaccess ~/workspace/web/.htaccess
 
